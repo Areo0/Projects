@@ -1,0 +1,62 @@
+using System;
+using System.ComponentModel.Design;
+using System.Net.Security;
+
+namespace równaniaKwadratowe
+{
+    internal class cs
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("podaj współczynnik a");
+            float a = float.Parse(Console.ReadLine());
+            if (a == 0)
+            {
+                Console.WriteLine("liczba nie może być równa 0");
+                {
+                    return;
+                }
+            }
+            Console.WriteLine("podaj współczynnik b");
+            float b = float.Parse(Console.ReadLine());
+            if (b == 0)
+            {
+                Console.WriteLine("liczba nie może być równa 0");
+                {
+                    return;
+                }
+            }
+            Console.WriteLine("podaj współczynnik c");
+            float c = float.Parse(Console.ReadLine());
+            if (c == 0)
+            {
+                Console.WriteLine("liczba nie może być równa 0");
+                {
+                    return;
+                }
+            }
+            float delta = (b * b - 4 * a * c);
+            if (delta > 0)
+            {
+                Console.WriteLine("równanie ma dwa różne pierwiastki");
+                double pierwiastek1 = (-b - Math.Sqrt(delta)) / (2 * a);
+                double pierwiastek2 = (-b + Math.Sqrt(delta)) / (2 * a);
+                Console.WriteLine(pierwiastek1);
+                Console.WriteLine(pierwiastek2);
+            }
+            if (delta == 0)
+            {
+                Console.WriteLine("równanie ma jeden podwójny pierwiastek rzeczywisty");
+                double pierwiastekX = -(b / 2 * a);
+                Console.WriteLine(pierwiastekX);
+            }
+            if (delta < 0)
+            {
+                Console.WriteLine("równanie nie ma pierwiastków rzeczywistych");
+                Console.WriteLine("więc jest tu brak rozwiązań");
+            }
+            
+            
+        }
+    }
+}
