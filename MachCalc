@@ -1,0 +1,24 @@
+using System.Diagnostics;
+
+namespace machCalc
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Wpisz swoje imię");
+            string imie;
+                imie = Console.ReadLine();
+            Console.WriteLine($"witaj {imie}!");
+            {
+                Console.WriteLine("Podaj dowolną liczbę machów do obliczenia");
+                double UserNum = double.Parse(Console.ReadLine());
+                double mach = 1225.04;
+                double suma = mach * UserNum;
+                Console.WriteLine($"Twój wynik to: {suma}");
+
+            }
+            
+        }
+    }
+}
