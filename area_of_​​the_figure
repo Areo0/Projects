@@ -1,0 +1,53 @@
+using System.Security.Authentication.ExtendedProtection;
+
+namespace Zadanie_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i=1; i>0; i++)
+            {
+                Console.WriteLine("Wybierz jedną z podanych opcji");
+                Console.WriteLine("1. kwadrat");
+                Console.WriteLine("2. trójkąt");
+                Console.WriteLine("3. koło");
+                int n = int.Parse(Console.ReadLine());
+                if (n == 1)
+                {
+                    Console.WriteLine("podaj długość boku");
+                    int bok = int.Parse(Console.ReadLine());
+                    int pole;
+                    pole = bok * bok;
+                    Console.WriteLine($"pole kwadratu wynosi {pole}");
+
+
+
+                }
+                if (n == 2)
+                {
+                    Console.WriteLine("podaj długość podstawy i wysokość");
+                    Console.WriteLine("podstawa");
+                    int podstawa = int.Parse(Console.ReadLine());
+                    Console.WriteLine("wysokość");
+                    int wysokość = int.Parse(Console.ReadLine());
+                    int pole;
+                    pole = (podstawa * wysokość) / 2;
+                    Console.WriteLine($"pole trójkąta wynosi {pole}");
+
+                }
+                if (n == 3)
+                {
+                    Console.WriteLine("podaj promień koła");
+                    int promień = int.Parse(Console.ReadLine());
+                    double pole;
+                    pole = Math.PI * promień * promień;
+                    Console.WriteLine($"pole koła wynosi {pole}");
+
+                }
+            }
+            
+        }
+        
+    }
+}
