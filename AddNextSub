@@ -1,0 +1,33 @@
+using System.Threading.Channels;
+
+namespace aplikacja_testowa
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("podaj liczby które mają się najpierw dodać a potem odjąć");
+            for (int i = 0; i < 10; i++)
+            {
+                {
+
+                    int zwr = AddAndSub(int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()));
+                    Console.WriteLine(zwr);
+                    Console.WriteLine("podaj ponownie liczby");
+
+                }
+
+                static int AddAndSub(int x, int y, int z)
+                {
+
+                    return x + y - z;
+
+                }
+            }
+        }
+
+
+
+    }
+}
